@@ -53,6 +53,5 @@ for (let i = 0; i < students.length; i++) {
         liElement.appendChild(textNode)
         listElement.appendChild(liElement);
         console.log(students[i].name);
-    }
-    
-}
+    }  
+  }
