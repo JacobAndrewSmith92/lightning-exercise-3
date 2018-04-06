@@ -41,11 +41,18 @@ const students = [
     gender: "M"
   }
 ]
+let listElement = document.getElementById("list-of-students")
 
-for (let i = 0; i < student.length; i++) {
-    const element = student[i];
-    if (gender === "F") {
-        console.log(student.name);
+for (let i = 0; i < students.length; i++) {
+    // if condition checks if the gender property of the student object is equal to "F"
+    if (students[i].gender === "F") {
+        // createElement creates a li tag to manipulated on the DOM
+        let liElement = document.createElement("li");
+
+        let textNode = document.createTextNode(students[i].name);
+        liElement.appendChild(textNode)
+        listElement.appendChild(liElement);
+        console.log(students[i].name);
     }
     
 }
